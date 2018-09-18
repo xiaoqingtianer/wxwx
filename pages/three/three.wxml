@@ -1,0 +1,20 @@
+<!--pages/three/three.wxml-->
+<import src="item.wxml" /> 
+<text>第三页</text>
+<view>
+<navigator url="/pages/index/index">go首页</navigator>
+</view>
+<view>
+  <navigator url="/pages/checkbox/checkbox">go啦啦啦~</navigator>
+  </view>
+<view>
+<input bindinput="input" value="{{msg}}" bindconfirm='add'/>
+</view>
+<switch checked bindchange="switch1Change"/>
+
+
+<view wx:for="{{list}}" wx:key="{{index}}" wx:if="{{flag}}">
+<template is="xm" data="{{...item,index}}"></template>
+</view>
+已完成{{count}}项
+

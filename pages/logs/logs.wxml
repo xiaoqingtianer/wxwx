@@ -1,0 +1,5 @@
+<!--logs.wxml-->
+<view>
+  <navigator url="/pages/three/three">第三页</navigator>
+  </view>
+

@@ -1,0 +1,19 @@
+<!--pages/test/test.wxml-->
+<text>test  todolist</text>
+<view>
+<navigator url="/pages/index/index">go首页</navigator>
+</view>
+
+<view>
+<input value="{{msg}}" bindinput='input' bindconfirm='add'></input>
+</view>
+
+<switch checked bindchange="switch1Change"/>
+<view wx:for="{{list}}" wx:key="{{index}}" wx:if="{{flag}}" class="del">
+<checkbox-group bindchange="checkboxChange" data-index="{{index}}">
+    <checkbox value="{{item.flag}}" checked="{{item.flag}}"/>
+</checkbox-group>
+{{item.txt}}
+<button bindtap='del' data-index="{{index}}">删除</button>
+</view>
+{{count}}
